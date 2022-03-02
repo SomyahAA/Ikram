@@ -102,8 +102,12 @@ The persona above was constructed using multiple questions that were asked to th
 
 
 
+## User flow
+
+![WhatsApp Image 2022-03-02 at 9 33 05 PM](https://user-images.githubusercontent.com/91451257/156441376-31bc5d29-d94b-4cc1-8b26-d2d4689e0e3b.jpeg)
 
 
 
+## Wireframe
 
-
+https://www.figma.com/file/yFNoWzERePH7rS4wYXBYLu/Untitled?node-id=0%3A1
