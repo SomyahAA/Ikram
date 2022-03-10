@@ -45,10 +45,16 @@
             android:text="Name" />
 
         <Button
+            android:id="@+id/upload_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="upload" />
+
+        <Button
             android:id="@+id/saveTitleDecripButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="save" />
 
     </LinearLayout>
 

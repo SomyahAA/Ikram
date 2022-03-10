@@ -39,6 +39,10 @@ class uploadContentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.uploadButton.setOnClickListener{
+
+            selectPic()
+        }
 
     }
 
@@ -65,10 +69,10 @@ class uploadContentFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         binding.saveTitleDecripButton.setOnClickListener {
             if (requestCode==picRequestCode&&resultCode== Activity.RESULT_OK) {
-                var title = binding.titleEditText.text.toString()
-                var description = binding.decripEditText.text.toString()
-                var Location = binding.LocationEditText .text.toString()
-                var donationType = binding.donationTypeEditText .text.toString()
+                val title = binding.titleEditText.text.toString()
+                val description = binding.decripEditText.text.toString()
+                val Location = binding.LocationEditText .text.toString()
+                val donationType = binding.donationTypeEditText .text.toString()
                 uri = data?.data!!
                 var date = Date()
 
