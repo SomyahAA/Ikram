@@ -1,20 +1,20 @@
-package com.example.ikram.ViewModel
+package com.example.ikram.viewModel
 
 import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.ikram_data.Database.pictureDataClass
-import com.example.ikram_data.repository.firebase_Repo
+import com.example.ikram.database.PictureDataClass
+import com.example.ikram.repository.FirebaseRepo
 import com.google.firebase.auth.FirebaseAuth
 
-class donationViewModel:ViewModel() {
+class DonationViewModel : ViewModel() {
 
-    private val donationRepository = firebase_Repo()
+    private val donationRepository = FirebaseRepo()
 
-    val userLiveDataError = MutableLiveData<String>()
-    val userLiveDataSuccessful = MutableLiveData<String>()
+    private val userLiveDataError = MutableLiveData<String>()
+    private val userLiveDataSuccessful = MutableLiveData<String>()
 
-    fun uploadPictureStorage(
+    private fun uploadPictureStorage(
         uri: Uri,
         name: String,
         title: String,
@@ -51,7 +51,7 @@ class donationViewModel:ViewModel() {
         uri.lastPathSegment?.let {
             donationRepository.uploadPicturesFireStore()
                 .add(
-                    pictureDataClass(
+                    PictureDataClass(
                         imageName,
                         FirebaseAuth.getInstance().uid.toString(),
                         title,
@@ -71,4 +71,6 @@ class donationViewModel:ViewModel() {
 
             }
     }
+
+
 }
